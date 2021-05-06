@@ -5,12 +5,12 @@ CXX      = g++
 CFLAGS   = -Wall -Wextra
 CXXFLAGS = -Wall
 
+GDBM_HOME = /usr/local
+
 #CC       = icc
 #CXX      = icpc
 #CFLAGS   = -Wall
 #CXXFLAGS = -Wall -std=c++0x 
-
-# 
 
 TARGETS =  arguments getoptP IOerrors dirDepth
 TARGETS += dirThreadCPP98 dirThreadCPP11
@@ -27,6 +27,7 @@ TARGETS += curDraw curHello curHelloMV curHelloMVW curHelloW curInput curColor
 TARGETS += termSizeWatch posixLimits
 TARGETS += isocLimits rlimit xdrFilter isocTokEx pcre_example
 TARGETS += rlEX rlEXC rlEXH
+TARGETS += mkGDBM rdGDBM
 
 SOLARISS = passwdshadow solaris_ps 
 
@@ -230,3 +231,9 @@ PCREINCP  = -I/opt/local/include
 
 pcre_example : pcre_example.c
 	$(CC) $(CFLAGS) $(PCREINCP) pcre_example.c $(PCRELIBP) $(PCRELIB) -o pcre_example
+
+mkGDBM : mkGDBM.c $(SPECDEP)
+	$(CC) $(CFLAGS) -I$(GDBM_HOME)/include mkGDBM.c $(GDBM_LP) $(GDBM_RP) -lgdbm -o mkGDBM
+
+rdGDBM : rdGDBM.c $(SPECDEP)
+	$(CC) $(CFLAGS) -I$(GDBM_HOME)/include rdGDBM.c $(GDBM_LP) $(GDBM_RP) -lgdbm -o rdGDBM
