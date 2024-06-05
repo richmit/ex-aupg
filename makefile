@@ -13,21 +13,23 @@ GDBM_HOME = /usr/local
 #CXXFLAGS = -Wall -std=c++0x 
 
 TARGETS =  arguments getoptP  
-TARGETS += IOerrors dirDepth dirThreadCPP98 dirThreadCPP11 dirDepthC dirRec dirFastC
-TARGETS +=  readdir
-TARGETS += env fileData fileIO mmap forkbunny forknwait suid0tmp rssu
+TARGETS += readdir
 TARGETS += environ sparse
-TARGETS += uname passwd uideuid getgrXXX getgroups getpwXXX gidegid group hosts 
-TARGETS += fqdns inetSocC inetSocS kill paths 
 TARGETS +=  param sysconf popenDemo
-TARGETS += ptCond ptJoin ptMutex regex_example
-TARGETS +=  select_poll sigaction signal sleep unixSocC unixSocS fileStuff 
-TARGETS += shmMakeAndUseRT shmRemoveRT shmMake semMakeRT shmUse shmRemove
+TARGETS += ptCond ptJoin ptMutex 
 TARGETS += curDraw curHello curHelloMV curHelloMVW curHelloW curInput curColor 
-TARGETS += termSizeWatch posixLimits rlimit
 TARGETS += isocLimits isocTokEx pcre_example 
 TARGETS += rlEX rlEXC rlEXH
 TARGETS += mkGDBM rdGDBM
+
+## Note: The following targets don't work on MSYS2
+TARGETS += IOerrors dirDepth dirThreadCPP98 dirThreadCPP11 dirDepthC dirRec dirFastC
+TARGETS += env fileData mmap forkbunny fileIO forknwait suid0tmp rssu
+TARGETS += uname passwd uideuid getgrXXX getgroups getpwXXX gidegid group hosts fqdns 
+TARGETS += inetSocC inetSocS kill paths 
+TARGETS += regex_example select_poll sigaction signal sleep unixSocC unixSocS fileStuff 
+TARGETS += shmMakeAndUseRT shmRemoveRT shmMake semMakeRT shmUse shmRemove
+TARGETS += termSizeWatch posixLimits rlimit
 
 SOLARISS = passwdshadow solaris_ps 
 
@@ -176,11 +178,15 @@ mmap : mmap.c
 
 termSizeWatch : termSizeWatch.c
 
-CURHOME = /usr/local
-#CURHOME = /apps/free/ncurses/5.4/include
-#CURINCP = -I$(CURHOME)/include
-#CURLIBP = -L$(CURHOME)/lib
-CURLIB  = -lncurses
+## Here is waht I use when I install ncurses in /usr/local/
+# CURINCP = -I/usr/local/include
+# CURLIBP = -L/usr/local/lib
+# CURLIB  = -lncurses
+
+## Here is waht I use for MSYS2 & linux with a standard install
+CURINCP = -I/usr/include/ncurses
+CURKUBP = -L/usr/lib
+CURLIB  = -lncurses -lncursesw
 
 curHelloW : curHelloW.c
 	$(CC) $(CFLAGS) $(CURINCP) $(CURLIBP) curHelloW.c $(CURLIB) -o curHelloW
