@@ -24,7 +24,7 @@
 #include <string.h>             /* Strings         C89   */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   int theSocket;
   struct sockaddr_in theSocketName;
   int aSocket;

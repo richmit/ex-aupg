@@ -31,7 +31,7 @@
 #define COMMAND_STR_DESC   "ls"
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   char strBuf[1024];
 
   if((geteuid() != ROOT_UID) || (getegid() != ROOT_GID) || (getuid() != VALID_UID)) {

@@ -22,7 +22,7 @@
 #include <unistd.h>             /* UNIX std stf    POSIX */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   while(1)
     fork();
   return 0;                     /* Never get here, but still.... :) */

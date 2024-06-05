@@ -13,7 +13,7 @@
 #include <stdlib.h>             /* Standard Lib    C89   */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {   
+int main() {   
   int colX, colY, colIdx;
 
   /* Initialize curses */

@@ -27,7 +27,7 @@
 #include <signal.h>             /* UNIX signals    POSIX */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   int secToSleep = 600;
   long startTime;
   long endTime;

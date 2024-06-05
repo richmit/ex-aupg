@@ -32,11 +32,11 @@
 #include "mtUtils.h"
 
 /**********************************************************************************************************************************/
-void workThread1(void *reqArg);
-void workThread2(void *reqArg);
+void *workThread1(void *reqArg);
+void *workThread2(void *reqArg);
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   pthread_t thread;
   void *threadReturn;
 
@@ -73,8 +73,11 @@ int main(int argc, char *argv[]) {
 } /* end func main */
 
 /**********************************************************************************************************************************/
-void workThread1(void *reqArg) {
+void *workThread1(void *reqArg) {
   int i;
+
+  /* Just to suppress warning about reqArg */
+  (void)reqArg;
 
   mtPrintf("thread 1 startup\n");
   for(i=0;i<3;i++) {
@@ -83,11 +86,16 @@ void workThread1(void *reqArg) {
   } /* end for */
   mtPrintf("thread 1 shutdown.\n");
 
+  return(0);
+
 } /* end func workerThread1 */
 
 /**********************************************************************************************************************************/
-void workThread2(void *reqArg) {
+void *workThread2(void *reqArg) {
   int i, *exitValue;
+
+  /* Just to suppress warning about reqArg */
+  (void)reqArg;
 
   mtPrintf("thread 2 startup\n");
   for(i=0;i<3;i++) {
@@ -97,5 +105,7 @@ void workThread2(void *reqArg) {
   mtPrintf("thread 2 shutdown.\n");
   mallocNsetInt(&exitValue, 42);
   pthread_exit(exitValue);
+
+  return(0);
 
 } /* end func workerThread2 */

@@ -12,20 +12,20 @@ GDBM_HOME = /usr/local
 #CFLAGS   = -Wall
 #CXXFLAGS = -Wall -std=c++0x 
 
-TARGETS =  arguments getoptP IOerrors dirDepth
-TARGETS += dirThreadCPP98 dirThreadCPP11
-TARGETS += dirDepthC dirRec dirFastC readdir
-TARGETS += env environ fileData fileIO mmap sparse
-TARGETS += forkbunny forknwait suid0tmp rssu
-TARGETS += uname passwd uideuid getgrXXX getgroups getpwXXX gidegid group hosts fqdns 
-TARGETS += inetSocC inetSocS kill paths param sysconf popenDemo
-TARGETS += ptCond ptJoin ptMutex
-TARGETS += regex_example select_poll sigaction signal sleep
-TARGETS += unixSocC unixSocS fileStuff 
+TARGETS =  arguments getoptP  
+TARGETS += IOerrors dirDepth dirThreadCPP98 dirThreadCPP11 dirDepthC dirRec dirFastC
+TARGETS +=  readdir
+TARGETS += env fileData fileIO mmap forkbunny forknwait suid0tmp rssu
+TARGETS += environ sparse
+TARGETS += uname passwd uideuid getgrXXX getgroups getpwXXX gidegid group hosts 
+TARGETS += fqdns inetSocC inetSocS kill paths 
+TARGETS +=  param sysconf popenDemo
+TARGETS += ptCond ptJoin ptMutex regex_example
+TARGETS +=  select_poll sigaction signal sleep unixSocC unixSocS fileStuff 
 TARGETS += shmMakeAndUseRT shmRemoveRT shmMake semMakeRT shmUse shmRemove
 TARGETS += curDraw curHello curHelloMV curHelloMVW curHelloW curInput curColor 
-TARGETS += termSizeWatch posixLimits
-TARGETS += isocLimits rlimit xdrFilter isocTokEx pcre_example
+TARGETS += termSizeWatch posixLimits rlimit
+TARGETS += isocLimits isocTokEx pcre_example 
 TARGETS += rlEX rlEXC rlEXH
 TARGETS += mkGDBM rdGDBM
 
@@ -46,8 +46,6 @@ uname : uname.c
 rlimit : rlimit.c
 
 posixLimits : posixLimits.c
-
-xdrFilter : xdrFilter.c
 
 isocLimits : isocLimits.c
 

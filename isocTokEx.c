@@ -27,7 +27,7 @@
 #include <stdio.h>              /* I/O lib         C89   */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   char *pwStr = "root:*:0:0:System Administrator:/var/root:/bin/sh::";
   char  *p, sepChar = ':';                 /* for: DIY */
   char *sep = ":", *pwField, pwStrC[1024]; /* for: strtok_r/strtok */

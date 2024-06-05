@@ -38,12 +38,12 @@
 pthread_mutex_t mutex1 = PTHREAD_MUTEX_INITIALIZER;
 
 /**********************************************************************************************************************************/
-void workThread1(void *reqArg);
-void workThread2(void *reqArg);
+void *workThread1(void *reqArg);
+void *workThread2(void *reqArg);
 
 /**********************************************************************************************************************************/
 /* This is where it starts. :) */
-int main(int argc, char *argv[]) {
+int main() {
   pthread_t thread;
   int *anIntPtr;
   int i;
@@ -94,7 +94,7 @@ int main(int argc, char *argv[]) {
 } /* end func main */
 
 /**********************************************************************************************************************************/
-void workThread1(void *reqArg) {
+void *workThread1(void *reqArg) {
 
   /* Thread will never be "joined", so we detach it. */
   pthread_detach(pthread_self());
@@ -120,10 +120,12 @@ void workThread1(void *reqArg) {
 
   /* The argument given to this thread was "malloced", so we free it now. */
   free(reqArg);
+
+  return(0);
 } /* end func workerThread1 */
 
 /**********************************************************************************************************************************/
-void workThread2(void *reqArg) {
+void *workThread2(void *reqArg) {
   int tryLockResult;
 
   /* Thread will never be "joined", so we detach it. */
@@ -154,4 +156,6 @@ void workThread2(void *reqArg) {
 
   /* The argument given to this thread was "malloced", so we free it now. */
   free(reqArg);
+
+  return(0);
 } /* end func workerThread2 */

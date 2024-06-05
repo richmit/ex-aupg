@@ -19,7 +19,7 @@
 #include <sys/mman.h>           /* mmap()          POSIX */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
 
   /* Getting rid of a shared memory segment via the POSIX RT APIs is simple: */
   if(shm_unlink("/tmp/foobar") < 0) {

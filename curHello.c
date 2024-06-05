@@ -16,7 +16,7 @@
 #include <ncurses.h>            /* Popular Curses  ????  */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   initscr();                                        /* Initialize curses (the SCReen)    */
   printw("Hello, World! (press any key to quit)");  /* Print "Hello, World!" to 'stdscr' */
   refresh();                                        /* Draw 'stdscr' on the real screen  */

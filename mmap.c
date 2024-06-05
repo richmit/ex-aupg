@@ -24,7 +24,7 @@
 #include <sys/stat.h>           /* UNIX stat       POSIX */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   int FD;
   char *fileName = "/tmp/mmapFile.tmp";
   char *fileData;

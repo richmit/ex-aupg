@@ -19,7 +19,7 @@
 #include <limits.h>             /* uname           POSIX */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   printf("char:\n");
   printf(" bare ............. size: %2d range: [%d,%d] (%s,%d-bit)\n", 
                                                            (int)sizeof(char),

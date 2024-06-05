@@ -25,7 +25,7 @@
 #include <errno.h>              /* error stf       POSIX */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   int numGroups, i;
   long ngroups_max; 
   /* gid_t gidList[NGROUPS_MAX]; */

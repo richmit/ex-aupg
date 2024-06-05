@@ -29,7 +29,7 @@
 #include <string.h>             /* Strings         C89   */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
 
   fd_set readFds, exceptFds;
   struct timeval theTimeOut;

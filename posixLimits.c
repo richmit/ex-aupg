@@ -20,7 +20,7 @@
 #include <limits.h>             /* uname           POSIX */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
 
   printf("_POSIX_ARG_MAX ....... Max argument length to exec ............. %llu\n", (unsigned long long int)_POSIX_ARG_MAX        );
   printf("_POSIX_CHILD_MAX ..... Number of children per user ............. %llu\n", (unsigned long long int)_POSIX_CHILD_MAX      );

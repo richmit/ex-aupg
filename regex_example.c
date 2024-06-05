@@ -35,7 +35,7 @@
 #define MAX_ERR_STR_LEN  256
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   int i;                                /* Loop variable.                          */
   char p[MAX_SUB_EXPR_LEN];             /* For string manipulation                 */
   regex_t aCmpRegex;                    /* Pointer to our compiled regex           */

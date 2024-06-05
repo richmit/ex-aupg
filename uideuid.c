@@ -20,7 +20,7 @@
 #include <stdio.h>              /* I/O lib         C89   */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   uid_t theUid, theEuid;
 
   /* Figure out who the user is running this thing. */

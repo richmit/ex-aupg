@@ -18,10 +18,10 @@
 #include <stdlib.h>             /* Standard Lib    C89   */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   int ch, drCh;
   int x, y, maxX, maxY, minX, minY;
-  int underline, reverse, bold;
+  unsigned int underline, reverse, bold;
 
   initscr();
   cbreak();
@@ -64,17 +64,17 @@ int main(int argc, char *argv[]) {
   while(1) {
     ch = getch();
     switch(ch) {
-      case KEY_DOWN      : y=y+1;                                    break;
-      case KEY_UP        : y=y-1;                                    break;
-      case KEY_LEFT      : x=x-1;                                    break;
-      case KEY_RIGHT     : x=x+1;                                    break;
-      case 'c'           : clear();                                  break;
-      case 'u'           : underline = abs(underline - A_UNDERLINE); break;
-      case 'r'           : reverse   = abs(reverse   - A_REVERSE);   break;
-      case 'b'           : bold      = abs(bold      - A_BOLD);      break;
-      case 'n'           : underline = reverse = bold = 0;           break;
-      case 'q'           : endwin(); exit(1);                        break;
-      default            : drCh = ch;                                break;
+      case KEY_DOWN      : y=y+1;                               break;
+      case KEY_UP        : y=y-1;                               break;
+      case KEY_LEFT      : x=x-1;                               break;
+      case KEY_RIGHT     : x=x+1;                               break;
+      case 'c'           : clear();                             break;
+      case 'u'           : underline = underline - A_UNDERLINE; break;
+      case 'r'           : reverse   = reverse   - A_REVERSE;   break;
+      case 'b'           : bold      = bold      - A_BOLD;      break;
+      case 'n'           : underline = reverse = bold = 0;      break;
+      case 'q'           : endwin(); exit(1);                   break;
+      default            : drCh = ch;                           break;
     } /* end switch */
     /* Clip x and y to fit the window. */
     x=(x<minX?minX:x); x=(x>maxX?maxX:x);

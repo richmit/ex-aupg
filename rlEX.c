@@ -25,7 +25,7 @@
 #include <readline/history.h>   /* readline history      */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   char *rLine;
   int i;
   char promptString[1024];

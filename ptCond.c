@@ -37,11 +37,11 @@ pthread_mutex_t the_mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_cond_t  the_cond  = PTHREAD_COND_INITIALIZER;
 
 /**********************************************************************************************************************************/
-void workThread(void *reqArg);
+void *workThread(void *reqArg);
 
 /**********************************************************************************************************************************/
 /* This is where it starts. :) */
-int main(int argc, char *argv[]) {
+int main() {
   pthread_t thread;
   int *anIntPtr;
   int i;
@@ -100,7 +100,7 @@ int main(int argc, char *argv[]) {
 } /* end func main */
 
 /**********************************************************************************************************************************/
-void workThread(void *reqArg) {
+void *workThread(void *reqArg) {
 
   /* We detach the thread as it will never be joined. */
   pthread_detach(pthread_self());
@@ -134,4 +134,7 @@ void workThread(void *reqArg) {
 
   /* The argument given to this thread was "malloced" just for this thread, so we free it now. */
   free(reqArg);
+  
+  /* Return */
+  return(0);
 } /* end func workerThread */

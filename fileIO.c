@@ -37,7 +37,7 @@
 #include <fcntl.h>              /* UNIX file ctrl  UNIX  */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   char buf[255];                /* A character buffer to use for I/O. */
   char *fileName = "foo";
   int returnValue;

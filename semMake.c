@@ -27,7 +27,7 @@
 #include <sys/sem.h>            /* Semaphores      POSIX */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   int semId;
   void *semAdd;
   key_t semKey;

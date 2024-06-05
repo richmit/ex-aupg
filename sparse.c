@@ -31,16 +31,16 @@
 #include <stdlib.h>             /* Standard Lib    C89   */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   int fd;
 
   fd = creat("s", O_WRONLY);
   /* First we write a byte at the start of the file.  This is not required to make a sparse file. */
-  write(fd, "x", 5);
+  write(fd, "x", 1);
   /* Now we seek way past the end of the file. Note that we use an unsigned integer constant to avoid overflow. */
   lseek(fd, 1024 * 1024UL * 1024 * 1024, SEEK_SET);
   /* Now we write another byte to the end of the file.  We have now created a 10Tb file. */
-  write(fd, "x", 5);
+  write(fd, "x", 1);
   close(fd);
 
   return 0;

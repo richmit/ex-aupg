@@ -24,7 +24,7 @@
 extern char **environ;
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   char **cp;
   printf("Environment:\n");
   for(cp=environ; *cp != NULL; cp++)

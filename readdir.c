@@ -25,7 +25,7 @@
 #include <stdlib.h>             /* Standard Lib    C89   */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   char dirToRead[] = "/";
   DIR *dp;
   struct dirent *dep;

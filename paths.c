@@ -21,7 +21,7 @@
 #include <paths.h>              /* UNIX Paths      ????  */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
 
   printf("_PATH_DEFPATH  %s\n", _PATH_DEFPATH  );
   printf("_PATH_STDPATH  %s\n", _PATH_STDPATH  );

@@ -46,7 +46,7 @@ void (*oldUserSignalAction1) (int);
 void (*oldUserSignalAction2) (int);
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
 
   /* mjrSignal() takes a signal number and a pointer to a signal handler.  It registers that function for that signal, and returns a
      pointer to the previous signal handler.  SIG_DFL is a pointer to the default signal handler.  SIG_IGN is a pointer to the

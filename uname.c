@@ -20,7 +20,7 @@
 #include <stdlib.h>             /* Standard Lib    C89   */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   struct utsname utsnameStructVar;
 
   if(uname(&utsnameStructVar) == -1) {

@@ -15,7 +15,7 @@
 #endif
 
 int
-main(int argc, char *argv[])
+main()
 {
   struct addrinfo hints, *result, *rp;
   int s;

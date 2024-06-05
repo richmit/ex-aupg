@@ -69,6 +69,12 @@ int main(int argc, char *argv[]) {
   gid_t theGid;
   char *strBuf;
 
+  /* Some platforms fail to set argv[0] to the name of the program */
+  if(argc < 1) {
+    printf("ERROR: PROGNAME not ARGV[0]!\n");
+    exit(1);
+  }
+
   /* Close all FDs over 2, and make sure all FDs under 3 are open. Exit if we can't fix the FDs.*/
   secureFDsOrExit();
 

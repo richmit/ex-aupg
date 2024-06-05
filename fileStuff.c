@@ -39,7 +39,7 @@
 #include <fcntl.h>              /* UNIX file ctrl  UNIX  */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   int fd;
 
   /* create a directory */

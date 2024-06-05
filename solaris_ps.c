@@ -37,7 +37,7 @@
 #include <sys/types.h>          /* UNIX types      POSIX */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   int fd;
   char dat[512];
   struct psinfo *thePsInfo;

@@ -31,7 +31,7 @@
 #include <string.h>             /* Strings         C89   */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   pcre *reCompiled;
   pcre_extra *pcreExtra;
   int pcreExecRet;

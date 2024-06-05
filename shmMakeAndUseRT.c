@@ -25,10 +25,11 @@
 #include <ctype.h>              /* Char classes    C89   */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   int shmFD;
   void *shmAdd;
-  int i, useMode=0;   /* 1=use segment, not create it. */
+  unsigned int i;
+  int useMode=0;   /* 1=use segment, not create it. */
 
   /* We get "open" a shared memory segment with the given name.  The flags work just as they do with open: O_CREAT creates the
      segment if it doesn't exist, O_EXCL errors out if the segment already exists, and O_RDRW opens it for read and write.  The

@@ -34,7 +34,8 @@
 #include <fcntl.h>              /* UNIX file ctrl  UNIX  */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+//int main(int argc, char *argv[]) {
+int main() {
   int FD;
   char *fileName = "foo";       /* The filename we are going to work with. */
   int returnValue;

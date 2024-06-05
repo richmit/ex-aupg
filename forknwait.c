@@ -29,7 +29,7 @@
 #include <sys/wait.h>           /* UNIX wait       POSIX */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   pid_t parentPID, wPID, childPID;
   int i, whyWait, mustWait, unknownFail;
 

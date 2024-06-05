@@ -25,7 +25,7 @@
 #include <stdio.h>              /* I/O lib         C89   */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   struct passwd *pwEnt;
   struct spwd *spEnt;
   char pwSalt[3];

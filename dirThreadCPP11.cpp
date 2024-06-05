@@ -33,8 +33,9 @@
 #include <unistd.h>                /* UNIX std stf            POSIX    */
 
 /**********************************************************************************************************************************/
-/** Use the absolutely thread-safe readdir_r function, or use the much faster, mostly thread-safe readdir system call */
-#define SAFEREADDIR 1
+/** Use the absolutely thread-safe readdir_r function, or use the much faster, mostly thread-safe readdir system call.
+    Note that readdir_r is deprecated in modern versions of libgcc. */
+#define SAFEREADDIR 0
 
 /**********************************************************************************************************************************/
 /** The list of dirs to traverse and related access control variables. */

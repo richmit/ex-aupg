@@ -27,7 +27,7 @@
 #include <ctype.h>              /* Char classes    C89   */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   int shmId;
   void *shmAdd;
   int i;

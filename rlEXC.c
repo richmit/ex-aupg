@@ -22,7 +22,7 @@ char *completGen(const char *, int);
 char **ourCompletor(const char *, int, int);
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   char *rLine;
   int i;
   char promptString[1024];
@@ -56,6 +56,7 @@ int main(int argc, char *argv[]) {
    it is the start, then it works. Otherwise, it passes off to the system version.*/
 char **ourCompletor(const char *text, int start, int end) {
   char **ourMatches;
+  (void)end; /* Suppress warning */
   ourMatches = (char **) NULL;
   if(start == 0)
     ourMatches = rl_completion_matches(text, completGen);
@@ -68,7 +69,7 @@ char *completGen(const char *text, int state) {
   static int textLen;        // Length of text
   char *retWord;             // Word we malloc and return
   static char **curWord;     // The word we check next
-  char *ourWords[] = {"my",  // Our list of words     
+  static char *ourWords[] = {"my",  // Our list of words     
                       "dog", 
                       "likes", "to",  "pee", "on", "posies",
                       NULL};

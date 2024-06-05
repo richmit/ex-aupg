@@ -23,7 +23,7 @@
 void printLimit(int theLimitNum, char *theLimitStr);
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
 
 #ifdef RLIMIT_CPU
   printLimit(RLIMIT_CPU, "RLIMIT_CPU (cpu time)");

@@ -18,7 +18,7 @@
 #include <sys/param.h>          /* UNIX Params     ????  */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
 
 #ifdef MAXINTERP     
   printf("MAXINTERP        max interpreter file name length   %d\n", (int)MAXINTERP);

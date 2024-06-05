@@ -18,7 +18,7 @@
 #include <readline/history.h>   /* readline history      */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   char *rLine, goodCmd[1024];
   int i;
   int historyExpandResult;

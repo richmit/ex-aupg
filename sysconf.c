@@ -25,7 +25,7 @@ debiandebiandebian
 #include <stdio.h>              /* I/O lib         C89   */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
 
 #ifdef _SC_ARG_MAX
   printf("_SC_ARG_MAX .......... Maximum bytes of argument to execve ................... %d\n", (int)sysconf(_SC_ARG_MAX));           // POSIX.1

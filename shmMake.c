@@ -26,7 +26,7 @@
 #include <sys/shm.h>            /* Shared Mem      POSIX */
 
 /**********************************************************************************************************************************/
-int main(int argc, char *argv[]) {
+int main() {
   int shmId;
   void *shmAdd;
   key_t shmKey;
